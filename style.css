@@ -1,0 +1,485 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: monospace;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:970px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+header {
+    height: 10vh;
+    padding-top: 15px;
+    background-color: #360836;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container nav {
+    width: 30%;
+}
+
+.container nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+header nav ul li a {
+    color: #ff0048;
+    font-size: 17px;
+}
+
+header ul li .active {
+    color: white;
+}
+
+/* Landing */
+.web {
+    width: 100%;
+    height: 90vh;
+    background-image: url("Images/cover.png");
+    background-size: cover;
+
+}
+
+.web {
+    text-align: center;
+    padding-top: 3rem;
+    position: relative;
+}
+
+.web .folk {
+    margin-bottom: 80px;
+}
+
+.web .folk h2 {
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.web .folk p {
+    letter-spacing: 10px;
+    font-size: 25px;
+    color: white;
+
+}
+
+.web .dream {
+    margin: 0 auto;
+    width: 30%;
+}
+
+.web .dream p {
+    color: white;
+    font-size: 25px;
+}
+
+.web .work {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    background-color: #ff0048;
+    padding: 15px;
+    width: 220px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Galley */
+.galyery {
+    width: 100%;
+    overflow: hidden;
+}
+
+.galyery .images {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 2;
+    background-image: url("Images/image_1.jpg");
+
+}
+
+.galyery .image {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.galyery .image img {
+    width: 100%;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.galyery .image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0%;
+    top: 0%;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+
+}
+
+.galyery .image:hover::after {
+    opacity: 1;
+}
+
+.galyery .image:hover img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+/* meet */
+.meet {
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.meet .head {
+    background-color: #ff0048;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+}
+
+.meet .head::after {
+
+    content: "";
+    position: absolute;
+    bottom: -55%;
+    left: 50%;
+    border: 10px solid;
+    border-color: #ff0048 transparent transparent transparent;
+}
+
+.meet .head p {
+    color: white;
+    font-size: 16px;
+}
+
+.meet .container h2 {
+    text-align: center;
+    color: #ff0048;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.meet .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.meet .meet_image {
+    text-align: center;
+    width: 400px;
+}
+
+.meet .meet_image h4 {
+    font-size: 25px;
+    color: #ff0048;
+    padding: 10px;
+}
+
+.meet .meet_image p {
+    font-size: 16px;
+    color: #000000a6;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.meet .contact {
+    padding: 10px;
+    background-color: #4b104b;
+    cursor: pointer;
+    color: wheat;
+    font-size: 16px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.meet .contact:hover {
+    opacity: 0.9;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.text {
+    padding-top: 40px;
+    background-image: url("Images/Cover_2.jpg");
+    padding-bottom: 40px;
+}
+
+.text .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    column-gap: 40px;
+    row-gap: 80px;
+}
+
+.text .box {
+    color: white;
+}
+
+.text .box h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+}
+
+.text .box p {
+    font-size: 17px;
+    font-size: 17px;
+    word-spacing: 4px;
+    /* border-spacing: 10px; */
+    line-height: 30px;
+}
+
+@media (max-width:760px) {
+    .container nav {
+        width: 100%;
+    }
+
+    .web .dream {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .meet .head::after {
+        bottom: -26%;
+        left: 46%;
+    }
+
+    .text .container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+
+/* Page Contact */
+.contact {
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+    padding-top: 40px;
+    background-image: url("Images/coverPage2.PNG");
+    background-size: cover;
+}
+
+.contact .text-contact {
+
+    text-align: center;
+}
+
+.contact h2 {
+    align-items: center;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.contact p {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.contact .form {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .form .form-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .form input {
+    margin-bottom: 10px;
+    color: white;
+    background-color: #ff0048;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.contact textarea {
+    color: white;
+    background-color: #ff0048;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.contact button {
+
+    padding: 10px;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    background-color: #ff0048;
+}
+
+.contact-footer {
+    height: 12vh;
+    text-align: center;
+    background-color: #e91e6338;
+}
+
+.contact-footer p {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.contact-footer .soical i {
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+}
+
+/* Page Book Online */
+.bookonline h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bookonline .cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookonline .section {
+    padding: 20px 10px;
+    background-color: #fff;
+    width: 60%;
+    display: flex;
+    padding-bottom: 80px;
+
+}
+
+.bookonline .section .right {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+ 
+    align-items: center;
+    margin: 0 auto;
+ 
+}
+
+.bookonline .section .right .right-text {
+    text-align: center;
+}
+
+.bookonline .right-text h3 {
+    font-size: 20px;
+    color: #000000c4;
+}
+
+.bookonline .right-text p {
+    padding: 10px;
+    color: #000000c4;
+}
+
+.bookonline .right-text a {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 15px;
+}
+@media (max-width:900px)
+{
+    .bookonline .left{
+        display: none;
+    }
+    .bookonline .section .right{
+        padding : 20px;
+    }
+}
